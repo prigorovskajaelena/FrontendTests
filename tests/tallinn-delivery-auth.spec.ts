@@ -1,12 +1,11 @@
 import { test, expect } from '@playwright/test';
-import {faker} from "@faker-js/faker/locale/ar";
+import {faker} from "@faker-js/faker";
 const TD_URL=process.env.TD_URL;
 //const TD_URL='https://fe-delivery.tallinn-learning.ee/signin'
 
 test.beforeEach(async ({page})=>{
 
         await page.goto(TD_URL);
-        await page.waitForLoadState('networkidle');
     }
 )
 test('TD negative auth test1', async ({ page }) => {
